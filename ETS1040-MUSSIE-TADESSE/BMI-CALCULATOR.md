@@ -16,30 +16,30 @@ Pseudocode
 
 3. Processing
 
-• Loop: For each person from 1 to numPeople:
+•Loop: For each person from 1 to numPeople:
 
-  • A. Input Mass:
+  A. Input Mass:
 
     • Prompt the User: Ask the user to enter the mass (in kilograms).
 
     • Receive Input: Store the mass in a variable called massInKg.
 
   
-  • B. Input Height:
+  B. Input Height:
 
     • Prompt the User: Ask the user to enter the height (in meters).
 
     • Receive Input: Store the height in a variable called heightInMeters.
 
   
-  • C. Calculate BMI:
+  C. Calculate BMI:
 
     • Compute BMI: Use the formula:
 
 BMI = massInKg / (heightInMeter × heightInMeters)}
 
 
-• D. Output BMI:
+D. Output BMI:
 
     • Display the Calculated BMI: Output the value of bodyMassIndex.
 

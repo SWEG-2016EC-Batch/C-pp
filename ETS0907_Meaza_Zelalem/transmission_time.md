@@ -56,9 +56,9 @@ This algorithm computes the time required to transmit a file over a network at a
 
 5. **Output the Results:**
    - Display the transmission time in the format:
-     ```
+     
      X days Y hours Z minutes and W seconds
-     ```
+     
 
 6. **End Program:**
    - Terminate the program.

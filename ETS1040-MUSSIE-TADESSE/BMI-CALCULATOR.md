@@ -42,7 +42,6 @@
 
  ```mermaid
 flowchart TD
-   
     A[Start] --> B[Input number of people]
     B --> C{For each person}
     C -->|Yes| D[Input mass (kg)]

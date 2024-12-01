@@ -1,4 +1,4 @@
-#Problem Analysis:
+# Problem Analysis
 1. **Inputs:** Fuel tank capacity, miles per gallon.
 3. **process:** Total miles = fuel tank capacity * miles per gallon.
 4. **Output:** Total miles.

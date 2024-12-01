@@ -70,4 +70,20 @@
 
 9. **End Program**
 
+         # Flowchart
+   ```mermaid
+flowchart TD
+    A[Start] --> B[Input Full Name]
+    B --> C[Input Weekly Working Hours]
+    C --> D[Input Bonus Rate per Hour]
+    D --> E[Input Base Salary]
+    E --> F[Calculate Bonus Payment]
+    F --> G[Calculate Gross Salary]
+    G --> H[Calculate Pension Deduction]
+    H --> I[Calculate Tax Deduction]
+    I --> J[Calculate Net Salary]
+    J --> K[Display Results]
+    K --> L[End]
+
+
 

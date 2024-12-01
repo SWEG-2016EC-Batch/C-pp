@@ -1,3 +1,8 @@
+#Problem Analysis:
+1. **Inputs:** Fuel tank capacity, miles per gallon.
+3. **process:** Total miles = fuel tank capacity * miles per gallon.
+4. **Output:** Total miles.
+
 # Algorithm
 
 ## Steps:
@@ -17,6 +22,8 @@
 4.  Display the total distance the automobile can travel without refueling.
 
 5. End Program.
+
+   #Flowchart:
 ```mermaid
    flowchart TD
     A[Start] --> B[Input fuel tank capacity in gallons]

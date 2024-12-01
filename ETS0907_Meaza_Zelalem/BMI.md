@@ -1,4 +1,9 @@
-# Algorithm: Body Mass Index (BMI) Calculator
+# Problem Analaysis
+1. **Input:** height(float, in meters) and weight (float, in killograms).
+2. **Process:** BMI= weight / (height * height).
+3. **Output:** BMI.
+
+# Algorithm
 
 This algorithm calculates the Body Mass Index (BMI) based on user inputs for height and weight, determines the BMI status, and allows the user to repeat the process.
 

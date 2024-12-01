@@ -10,14 +10,14 @@
      - If invalid (non-numeric or negative), display an error and terminate.
 
 3.  Compute the total miles that can be driven using the formula:
-     ```
+   
      total_miles = fuel_tank_capacity * miles_per_gallon
-     ```
+   
 
 4.  Display the total distance the automobile can travel without refueling.
 
 5. End Program.
-
+```mermaid
    flowchart TD
     A[Start] --> B[Input fuel tank capacity in gallons]
     B --> C{Is input valid?}

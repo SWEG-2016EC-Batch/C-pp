@@ -1,4 +1,9 @@
-# Algorithm: Calculate File Transmission Time
+# Problem Analysis:
+1. **Input:**  file size (double, in bytes).
+2. **Process:** Transmission Time = file size (in bytes)/ (960 bytes/second), Days =Transmission time/(24*3600) , Hours = Transmission time /3600, Minutes= Transmission time /60, Seconds = Transmission time% 60.
+3.**Output:** Days, Hours, Minutes, Seconds.
+   
+# Algorithm
 
 This algorithm computes the time required to transmit a file over a network at a given transmission rate, converting the total time into days, hours, minutes, and seconds.
 

@@ -46,7 +46,7 @@
 ### Step 7: End
 - **Terminate the program.**
 
-  # Flowchart
+# Flowchart
   ```mermaid
 flowchart TD
     A[Start] --> B[Input Base]

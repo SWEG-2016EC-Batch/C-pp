@@ -12,7 +12,7 @@ This algorithm computes the time required to transmit a file over a network at a
 ## Steps
 
 1. **Input File Size:**
-   - Prompt the user to input the size of the file in bytes.
+   - Accept the size of the file in bytes.
    - Validate the input:
      - Ensure it is a numeric value.
      - Ensure the value is non-negative.

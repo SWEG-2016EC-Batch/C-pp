@@ -23,7 +23,7 @@
 
 5. End Program.
 
-   #Flowchart:
+   # Flowchart:
 ```mermaid
    flowchart TD
     A[Start] --> B[Input fuel tank capacity in gallons]

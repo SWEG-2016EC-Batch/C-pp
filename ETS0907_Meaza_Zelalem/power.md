@@ -19,7 +19,7 @@
 4.  Display the computed result.
 
 5. End Program.
-   #Flowhart:
+   # Flowhart
    ```mermaid
    ```
 flowchart TD

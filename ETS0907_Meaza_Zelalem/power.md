@@ -1,7 +1,8 @@
 # Problem Analysis
-1.**Input:** base, exponent
-2.**Process:** Use the pow() function to calculate the result of raising the base (x) to the power of the exponent (y)
-3.**Output:** Result
+1. **Input:** base, exponent
+2. **Process:** Use the pow() function to calculate the result of raising the base (x) to the power of the exponent (y)
+3. **Output:** Result
+
 
 # Algorithm
 ## Steps:

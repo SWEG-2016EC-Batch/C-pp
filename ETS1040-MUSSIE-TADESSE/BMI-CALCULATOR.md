@@ -42,7 +42,7 @@
 
  ```mermaid
 flowchart TD
-   flowchart TD
+   
     A[Start] --> B[Input number of people]
     B --> C{For each person}
     C -->|Yes| D[Input mass (kg)]
@@ -56,5 +56,5 @@ flowchart TD
     I --> C
     J --> C
     C -->|No| K[Display 'BMI calculations complete. Goodbye!']
-    K --> L[End] 
+    K --> L[End]
 

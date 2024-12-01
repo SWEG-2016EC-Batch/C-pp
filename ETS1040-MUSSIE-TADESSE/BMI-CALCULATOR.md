@@ -38,3 +38,4 @@
    - **Completion Message**: After all calculations are complete, print a message indicating that the BMI calculations are complete.
    - **Terminate Program**: End the program.
 
+Flowchart : Body Mass Index

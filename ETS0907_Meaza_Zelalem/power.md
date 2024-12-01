@@ -19,9 +19,9 @@
 4.  Display the computed result.
 
 5. End Program.
-   # Flowhart
+   # Flowchart
    ```mermaid
-   ```
+
 flowchart TD
     A[Start] --> B[Input Base]
     B --> C{Is input valid?}

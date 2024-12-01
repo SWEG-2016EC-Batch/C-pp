@@ -1,8 +1,9 @@
-# Problem Analysis:
-1.**Input:** base, exponent.
-2.**Process:** Use the pow() function to calculate the result of raising the base (x) to the power of the exponent (y).
-3. **Output:** Result.
-# Algorithm:
+# Problem Analysis
+1.**Input:** base, exponent
+2.**Process:** Use the pow() function to calculate the result of raising the base (x) to the power of the exponent (y)
+3.**Output:** Result
+
+# Algorithm
 ## Steps:
 1.Accept the base (x).
    - Validate the input:
@@ -20,8 +21,7 @@
 
 5. End Program.
    # Flowchart
-   ```mermaid
-
+  ```mermaid
 flowchart TD
     A[Start] --> B[Input Base]
     B --> C{Is input valid?}

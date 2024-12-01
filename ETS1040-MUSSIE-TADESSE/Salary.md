@@ -70,7 +70,7 @@
 
 9. **End Program**
 
-         # Flowchart
+# Flowchart
    ```mermaid
 flowchart TD
     A[Start] --> B[Input Full Name]

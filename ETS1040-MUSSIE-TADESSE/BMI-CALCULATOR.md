@@ -42,24 +42,19 @@
 
  ```mermaid
 flowchart TD
-    A[Start] --> B[Initialize variables]
-    B --> C[Input height]
-    C --> D{Is height valid?}
-    D -->|No| E[Display error and restart loop]
-    D -->|Yes| F[Input weight]
-    F --> G{Is weight valid?}
-    G -->|No| E
-    G -->|Yes| H[Calculate BMI]
-    H --> I{Determine BMI status}
-    I -->|Underweight| J[Display 'Underweight']
-    I -->|Normal weight| K[Display 'Normal weight']
-    I -->|Overweight| L[Display 'Overweight']
-    I -->|Obesity| M[Display 'Obesity']
-    J --> N[Ask user to continue?]
-    K --> N
-    L --> N
-    M --> N
-    N --> O{Continue?}
-    O -->|Yes| C
-    O -->|No| P[End]
+   flowchart TD
+    A[Start] --> B[Input number of people]
+    B --> C{For each person}
+    C -->|Yes| D[Input mass (kg)]
+    D --> E[Input height (m)]
+    E --> F[Calculate BMI]
+    F --> G{Determine BMI classification}
+    G -->|Underweight| H[Display 'Classification: Underweight']
+    G -->|Normal weight| I[Display 'Classification: Normal weight']
+    G -->|Overweight| J[Display 'Classification: Overweight']
+    H --> C
+    I --> C
+    J --> C
+    C -->|No| K[Display 'BMI calculations complete. Goodbye!']
+    K --> L[End] 
 

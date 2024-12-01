@@ -51,11 +51,7 @@ This algorithm calculates the Body Mass Index (BMI) based on user inputs for hei
 
 ---
 
-## Notes:
-- Input validation ensures the program handles invalid or non-numeric inputs gracefully.
-- The loop allows users to calculate BMI for multiple entries until they choose to exit.
-- The BMI status categories are based on standard ranges.
-
+# Flowchart : Body Mass Index
 ```mermaid
 flowchart TD
     A[Start] --> B[Initialize variables]

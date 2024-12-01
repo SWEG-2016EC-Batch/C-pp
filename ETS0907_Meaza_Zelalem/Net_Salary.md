@@ -43,7 +43,7 @@ tax = gross_salary * 0.15
 12. End Program.
 
     # Flowchart
-    ```mermaid
+   ```mermaid
 flowchart TD
     A[Start] --> B[Input Full Name]
     B --> C[Input Weekly Working Hours]
@@ -56,4 +56,5 @@ flowchart TD
     I --> J[Calculate Net Salary]
     J --> K[Display Results]
     K --> L[End]
+
 

@@ -40,20 +40,18 @@
 
 ### Flowchart : Body Mass Index
 
- ```mermaid
+```mermaid
 flowchart TD
-    A[Start] --> B[Input number of people]
-    B --> C{For each person}
-    C -->|Yes| D[Input mass (kg)]
-    D --> E[Input height (m)]
-    E --> F[Calculate BMI]
-    F --> G{Determine BMI classification}
-    G -->|Underweight| H[Display 'Classification: Underweight']
-    G -->|Normal weight| I[Display 'Classification: Normal weight']
-    G -->|Overweight| J[Display 'Classification: Overweight']
-    H --> C
-    I --> C
-    J --> C
-    C -->|No| K[Display 'BMI calculations complete. Goodbye!']
-    K --> L[End]
+    start([start]) --> input[/input weight and height/]
+    input --> process["BMI = weight/(height * height)"]
+    process --> print["print BMI"]
+    print --> check1{"is BMI < 18.5"}
+    check1 -- yes --> print1[/print "underweight"/]
+    check1 -- no --> check2{"is BMI >= 25"}
+    check2 -- yes --> print2[/print "overweight"/]
+    check2 -- no --> print3[/print "normal weight"/]
+    print1 & print2 & print3 --> check{do you want to run again?}
+    check -- yes --> input
+    check -- no --> stop([stop])
+```
 

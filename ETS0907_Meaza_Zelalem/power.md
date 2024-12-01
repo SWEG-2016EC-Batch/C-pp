@@ -21,6 +21,7 @@
 5. End Program.
    #Flowhart:
    ```mermaid
+   ```
 flowchart TD
     A[Start] --> B[Input Base]
     B --> C{Is input valid?}

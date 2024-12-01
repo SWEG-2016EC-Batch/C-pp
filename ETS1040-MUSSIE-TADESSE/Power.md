@@ -45,3 +45,16 @@
 
 ### Step 7: End
 - **Terminate the program.**
+
+  # Flowchart
+  ```mermaid
+flowchart TD
+    A[Start] --> B[Input Base]
+    B --> C{Is input valid?}
+    C -->|No| D[Display error and terminate]
+    C -->|Yes| E[Input Exponent]
+    E --> F{Is input valid?}
+    F -->|No| D
+    F -->|Yes| G[Calculate Exponentiation]
+    G --> H[Display Result]
+    H --> I[End]

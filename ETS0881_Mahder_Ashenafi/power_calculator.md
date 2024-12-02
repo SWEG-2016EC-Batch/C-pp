@@ -52,6 +52,8 @@ flowchart TD
     J --> R((End))
     K --> R
     Q --> R((End))
+    D --> R
+    G --> R
 
 ```
 

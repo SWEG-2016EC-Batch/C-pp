@@ -59,7 +59,7 @@ flowchart TD
     G -->|Yes| H[Calculate BMI]
     H --> I{Determine BMI status}
     I -->|Underweight| J[/Display 'Underweight'/]
-    I -->|Normal weight| K[.Display 'Normal weight'/]
+    I -->|Normal weight| K[/Display 'Normal weight'/]
     I -->|Overweight| L[/Display 'Overweight'/]
     I -->|Obesity| M[/Display 'Obesity'/]
     J --> N[Ask user to continue?]
@@ -68,4 +68,4 @@ flowchart TD
     M --> N
     N --> O{Continue?}
     O -->|Yes| C
-    O -->|No| P[End]
+    O -->|No| P((End))

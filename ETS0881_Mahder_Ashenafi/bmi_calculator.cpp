@@ -12,10 +12,26 @@ int main()
         cout << "Enter Height: ";
         cin >> height;
 
+        if (cin.fail() || height <= 0)
+        {
+            cin.clear();
+            tryal += 1;
+            if (tryal <= 2)
+            {
+                cout << "Enter a valid height/weight! you have "
+                     << 3 - tryal << " tries left." << endl;
+                goto a;
+            }
+            else
+            {
+                exit(0);
+            }
+        }
+
         cout << "Enter Weight: ";
         cin >> weight;
 
-        if (cin.fail())
+        if (cin.fail() || weight <= 0)
         {
             cin.clear();
             tryal += 1;
@@ -43,9 +59,13 @@ int main()
         {
             cout << "You have a normal weight." << endl;
         }
-        else
+        else if (24.9 <= bmi <= 29.9)
         {
             cout << "You are over weight." << endl;
+        }
+        else
+        {
+            cout << "You are obesse" << endl;
         }
 
         cout << "Do you want to continue? Yes(1) or No(0) : ";

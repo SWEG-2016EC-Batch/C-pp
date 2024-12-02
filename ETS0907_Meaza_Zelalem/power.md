@@ -25,10 +25,10 @@
    # Flowchart
  ```mermaid
 flowchart TD
-    A((Start)) --> B[/Input base number (x)/]
+    A((Start)) --> B[/Input base number x/]
     B --> C{Is input valid?}
     C -->|No| D[/Display "Invalid input!"/]
-    C -->|Yes| E[/Input power number (y)/]
+    C -->|Yes| E[/Input power number y/]
     E --> F{Is input valid?}
     F -->|No| D
     F -->|Yes| G{Is y >= 0?}

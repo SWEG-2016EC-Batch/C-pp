@@ -1,25 +1,59 @@
-Problem:
-    Design an algorithm and write a to read an employee name weekly working hours, bonus rate per hour and base salary and find the employees gross-salary, net salary and bonus payment. (Hint: pension rate – 5%, tax: 15%).
-Problem Analysis:
-    Input : base_salary(float), bonus_rate(float), weekly_working_hours(float)
-    Process : 
-        Bonus_Payment = (bonus_rate / 100) * weekly_working_hours
-        Gross_Salary = base_salary + bonus_payment
-        tax = Gross_salary * 0.15
-        pension = Gross_salary * 0.05
-        net_salary = Gross_salary - pension - tax
-    Output : 
-        print(Bonus_payment, tax, pension, and net_salary)
-Algorithm Design:
-    Pseudocode:
-        Step 1 : Start
-        Step 2 : Accept inputs - base_salary(float), bonus_rate(float), and base_salary(float).
-        Step 3 : bonus_payment = (bonus_rate / 100) * base_salary
-        Step 4 : gross_salary = base_salary + bonus_payment
-        Step 5 : tax = 0.15 * gross_salary
-        Step 6 : pension = 0.05 * gross_salary
-        Step 7 : net_salary = gross_salary - tax - pension
-        Step 8 : Print(bonus_payment, tax, pension, net_salary)
-        Step 9 : Stop
-         
+# Problem Analysis
+1. **Input:** Fullname, Weekly working hour, Bonus rate per hour, Base salary.
+2. **process:** bonus payment=weekly working hour*bonus rate per hour, gross salary=base salary+ bonus payment, pension =gross salary*0.05, tax=gross_salary*0.15, net salary=gross salary - tax - pension.
+3. **output:** Fullname, Bonus payment, Gross Salary, Pension , Net Salary.
+
+# Algorithm
+
+## Steps:
+1. Accept the user's  full name.
+
+2. Accept the weekly working hours.
+
+3. Acept the bonus rate per hour.
+
+4. Accept base salary.
+
+5.Compute the bonus payment using the formula:
+      bonus_payment = weekly_working_hours * bonus_rate_per_hour * base_salary
+     
+
+6. Compute the gross salary using the formula:
+     gross_salary = base_salary + bonus_payment.
+
+7. Compute the pension deduction using the formula:
+     pension = gross_salary * 0.05
+
+8. Compute the tax deduction using the formula:
+
+tax = gross_salary * 0.15
+
+10. Compute the net salary using the formula:
+     net_salary = gross_salary - tax - pension
+     
+
+11.  Display the following:
+      - Full Name
+      - Bonus Payment
+      - Gross Salary
+      - Pension Deduction
+      - Tax Deduction
+      - Net Salary
+
+12. End Program.
+
+    # Flowchart
+   ```mermaid
+flowchart TD
+    A((Start)) --> B[/Input Full Name/]
+    B --> C[/Input Weekly Working Hours/]
+    C --> D[/Input Bonus Rate per Hour/]
+    D --> E[/Input Base Salary/]
+    E --> F[Calculate Bonus Payment]
+    F --> G[Calculate Gross Salary]
+    G --> H[Calculate Pension Deduction]
+    H --> I[Calculate Tax Deduction]
+    I --> J[Calculate Net Salary]
+    J --> K[/Display Results/]
+    K --> L((End))
 

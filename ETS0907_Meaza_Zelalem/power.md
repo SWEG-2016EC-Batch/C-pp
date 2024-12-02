@@ -34,7 +34,7 @@ flowchart TD
     F -->|Yes| G{Is y >= 0?}
     G -->|Yes| H[Calculate x^y]
     H --> I[/Display result/]
-    G -->|No| J[Calculate 1 / x^(-y)]
+    G -->|No| J[Calculate 1 / x^-y]
     J --> I
     I --> K((End))
 ```

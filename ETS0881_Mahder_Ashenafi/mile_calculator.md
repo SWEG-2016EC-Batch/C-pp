@@ -16,7 +16,7 @@
 
 3.  Compute the total miles that can be driven using the formula:
    
-     total_miles = fuel_tank_capacity * miles_per_gallon
+     `miles` = `capacity` * `miles_per_gallon`
    
 
 4.  Display the total distance the automobile can travel without refueling.

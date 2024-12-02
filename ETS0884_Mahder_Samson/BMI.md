@@ -50,7 +50,7 @@
 ```mermaid
 flowchart TD
     A((Start))--> B[Initialize variables]
-    B --> C[Input height]
+    B --> C[/Input height/]
     C --> D{Is height valid?}
     D -->|No| E[Display error and restart loop]
     D -->|Yes| F[Input weight]

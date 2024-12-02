@@ -1,5 +1,5 @@
 # Problem Analysis
-1. **Input:** base, exponent
+1. **Input:** base(x), exponent(y).
 2. **Process:** multiplying x by itself y times.
 3. **Output:** Result
 

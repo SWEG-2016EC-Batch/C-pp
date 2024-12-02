@@ -19,7 +19,8 @@
 2.  Set the transmission rate to a constant value (e.g., 960 bytes/second).
 
 3. Compute the total transmission time in seconds:
-     \[
+
+    \[
      \text{transmission\_time} = \frac{\text{file\_size\_in\_bytes}}{\text{transmission\_rate}}
      \]
    - Convert the transmission time to an integer for subsequent calculations.

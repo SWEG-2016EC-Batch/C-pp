@@ -9,23 +9,23 @@
 
 ## Steps:
 
-1. Define variables for `height`, `weight`, `BMI`, and a control variable `continue_` set to `1`.
+1. Define variables for `height`, `weight`, `BMI`, and a control variable `cont` set to `1`.
 
-2.  Enter a loop that continues while `continue_ == 1`.
+2.  Enter a loop that continues while `cont == 1`.
 
 3.  Accept height.
    - Validate the input:
-     - If the height is non-numeric or less than or equal to 0:
+     - If the height is non-numeric or less than or equal to 0 and tryal < 3:
        - Display an error message.
-       - Clear the input buffer and ignore invalid input.
-       - Restart the loop.
+       - redo step 3
+       - else if tryal >= 3 exit(0).
 
 4. Accept weight.
    - Validate the input:
-     - If the weight is non-numeric or less than or equal to 0:
-       - Display an error message.
-       - Clear the input buffer and ignore invalid input.
-       - Restart the loop.
+     - If the weight is non-numeric or less than or equal to 0 and tryal < 3:
+     - restart step 4.
+     - else if tryal >= 3 exit(0).
+       
 
 5.Compute the BMI using the formula:
      \[
@@ -49,23 +49,23 @@
 # Flowchart : Body Mass Index
 ```mermaid
 flowchart TD
-    A[Start] --> B[Initialize variables]
-    B --> C[Input height]
+    A((Start)) --> B[Initialize variables]
+    B --> C[/Input height/]
     C --> D{Is height valid?}
     D -->|No| E[Display error and restart loop]
-    D -->|Yes| F[Input weight]
+    D -->|Yes| F[/Input weight/]
     F --> G{Is weight valid?}
     G -->|No| E
     G -->|Yes| H[Calculate BMI]
     H --> I{Determine BMI status}
-    I -->|Underweight| J[Display 'Underweight']
-    I -->|Normal weight| K[Display 'Normal weight']
-    I -->|Overweight| L[Display 'Overweight']
-    I -->|Obesity| M[Display 'Obesity']
+    I -->|Underweight| J[/Display 'Underweight'/]
+    I -->|Normal weight| K[/Display 'Normal weight'/]
+    I -->|Overweight| L[/Display 'Overweight'/]
+    I -->|Obesity| M[/Display 'Obesity'/]
     J --> N[Ask user to continue?]
     K --> N
     L --> N
     M --> N
     N --> O{Continue?}
     O -->|Yes| C
-    O -->|No| P[End]
+    O -->|No| P((End))

@@ -5,31 +5,26 @@
    
 # Algorithm
 
-This algorithm computes the time required to transmit a file over a network at a given transmission rate, converting the total time into days, hours, minutes, and seconds.
 
 ---
 
 ## Steps
 
-1. **Input File Size:**
-   - Accept the size of the file in bytes.
+1. Accept the size of the file in bytes.
    - Validate the input:
      - Ensure it is a numeric value.
      - Ensure the value is non-negative.
      - If the input is invalid, display an error message and terminate the program.
 
-2. **Define Transmission Rate:**
-   - Set the transmission rate to a constant value (e.g., 960 bytes/second).
+2.  Set the transmission rate to a constant value (e.g., 960 bytes/second).
 
-3. **Calculate Transmission Time:**
-   - Compute the total transmission time in seconds:
+3. Compute the total transmission time in seconds:
      \[
      \text{transmission\_time} = \frac{\text{file\_size\_in\_bytes}}{\text{transmission\_rate}}
      \]
    - Convert the transmission time to an integer for subsequent calculations.
 
-4. **Convert Time Units:**
-   - Determine the number of **days**:
+4.Determine the number of **days**:
      \[
      \text{days} = \frac{\text{total\_seconds}}{24 \times 3600}
      \]
@@ -54,14 +49,12 @@ This algorithm computes the time required to transmit a file over a network at a
      \text{seconds} = \text{total\_seconds} \% 60
      \]
 
-5. **Output the Results:**
-   - Display the transmission time in the format:
+5. Display the transmission time in the format:
      
      X days Y hours Z minutes and W seconds
      
 
-6. **End Program:**
-   - Terminate the program.
+6. Terminate the program.
 
 ---
 

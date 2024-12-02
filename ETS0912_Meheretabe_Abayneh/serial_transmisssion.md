@@ -38,5 +38,23 @@ A serial transmission line can transmit 960 characters a second. Write a program
 > **Step 15**: Stop
 
 ### FLow chart
+```mermaid
+flowchart TD
+    A((Start)) --> B[/"file size (MB)"/]
+    B --> C{"Is input valid? (file_size >= 0)"}
+    C -->|No| D[/"error: Invalid input and exit"/]
+    C -->|Yes| E["Calculate mbyte: file_size * 1024 * 1024"]
+    E --> F["Calculate time: mbyte / character"]
+    F --> G["Convert time to integer: timer = time"]
+    G --> H["day: timer / day_rate"]
+    H --> I["reminder3: timer % day_rate"]
+    I --> J["hour: reminder3 / hr_rate"]
+    J --> K["reminder: reminder3 % hr_rate"]
+    K --> L["min: reminder / min_rate"]
+    L --> M["reminder2: reminder % min_rate"]
+    M --> N[/"days, hours, minutes, and seconds"/]
+    N --> O((End))
 
-![](serial_transmission.jpg)
+
+
+

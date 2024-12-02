@@ -27,7 +27,7 @@ flowchart TD
     A((Start)) --> B[/Input Base/]
     B --> C{Is input valid?}
     C -->|No| D[Display error and terminate]
-    C -->|Yes| E[Input Exponent]
+    C -->|Yes| E[/Input Exponent/]
     E --> F{Is input valid?}
     F -->|No| D
     F -->|Yes| G[Calculate Exponentiation]

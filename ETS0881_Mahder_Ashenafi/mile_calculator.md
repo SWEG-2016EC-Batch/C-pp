@@ -1,29 +1,43 @@
-# Problem Analysis
-1. **Inputs:** Fuel tank capacity, miles per gallon.
-3. **process:** Total miles = fuel tank capacity * miles per gallon.
-4. **Output:** Total miles.
+## Automobile mile calculator
 
-# Algorithm
+---
 
-## Steps:
-1.  Accept the fuel tank capacity in gallons.
-   - Validate the input:
-     - If invalid (non-numeric or negative), display an error and terminate.
+### Problem
 
-2. Accept the vehicle's fuel efficiency (miles per gallon).
-   - Validate the input:
-     - If invalid (non-numeric or negative), display an error and terminate.
+Write a program that prompts the capacity in gallons of an automobile fuel tank and the miles per gallons the automobiles can be driven. The program outputs the number miles the automobile cam be driven without refueling.
 
-3.  Compute the total miles that can be driven using the formula:
-   
-     `miles` = `capacity` * `miles_per_gallon`
-   
+### Problem analtsis
 
-4.  Display the total distance the automobile can travel without refueling.
+> - **Input**: gas capacity(_gallon_), distance Automobile can go per gallon(_mile_)
 
-5. End Program.
+> - **Process**: calculate total mile can be mover with full tank
 
-   # Flowchart:
+> - **Output**: total miles
+
+## Algorithm design
+
+### Pseudocode
+
+> **Step 1**: Start  
+> **Step 2**: declare variables gallon gas(_double_), mile gallon(_double_), total mile(_double_)  
+> **Step 3**: read gas in gallon(gallon gas)  
+> **Step 4**: check gas in galon
+>
+> > 4.1: if input is invalid or less than 0, print invalid input  
+> > 4.2: if input is valid and greater than or equal to 0, go to **Step 5**
+>
+> **Step 5**: read mile per galon(mile galon)  
+> **Step 6**: check mile galon
+>
+> > 6.1: if input is invalid or less than 0, print invalid input  
+> > 6.2: if input is valid and greater than or equal to 0, go to **Step 7**
+>
+> **Step 7**: calculate total mile as gallon gas \* miles per gallon  
+> **Step 8**: print total miles  
+> **Step 9**: Stop
+
+### FLow chart
+
 ```mermaid
    flowchart TD
     A((Start)) --> B[/Input fuel tank capacity in gallons/]
@@ -35,3 +49,5 @@
     F -->|Yes| G[Calculate total miles]
     G --> H[/Display total miles/]
     H --> I((End))
+
+```

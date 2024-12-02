@@ -5,9 +5,13 @@ int main()
     int cont = 1;
     while (cont == 1)
     {
+        string name;
         float base_salary, gross_salary, net_salary, bonus_payment, weekly_hours;
         float bonus_rate;
         int tryal = 1;
+
+        cout << "Enter Name: ";
+        getline(cin, name);
 
     a:
         cout << "Enter base salary : ";
@@ -74,10 +78,10 @@ int main()
         float pension = gross_salary * 0.05;
         net_salary = gross_salary - tax - pension;
 
-        cout << "Your bonus-payment is " << bonus_payment << endl;
-        cout << "Your gross-salary is " << gross_salary << endl;
+        cout << name << "'s bonus-payment is " << bonus_payment << endl;
+        cout << name << "'s gross-salary is " << gross_salary << endl;
         cout << "Tax: " << tax << " and Pension: " << pension << endl;
-        cout << "Your net-salary is " << net_salary << endl;
+        cout << name << "'s net-salary is " << net_salary << endl;
 
         cout << "Do you want to continue? Yes(1) or No(0) : ";
         cin >> cont;

@@ -67,7 +67,7 @@ This algorithm computes the time required to transmit a file over a network at a
 
 
 
-## File Transmission Time Flowchart
+## Transmission Time Flowchart
 
 ``` mermaid
 flowchart 

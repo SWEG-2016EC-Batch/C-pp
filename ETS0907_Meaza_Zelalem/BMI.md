@@ -9,23 +9,23 @@
 
 ## Steps:
 
-1. Define variables for `height`, `weight`, `BMI`, and a control variable `continue_` set to `1`.
+1. Define variables for `height`, `weight`, `BMI`, and a control variable `cont` set to `1`.
 
-2.  Enter a loop that continues while `continue_ == 1`.
+2.  Enter a loop that continues while `cont == 1`.
 
 3.  Accept height.
    - Validate the input:
-     - If the height is non-numeric or less than or equal to 0:
+     - If the height is non-numeric or less than or equal to 0 and tryal < 3:
        - Display an error message.
-       - Clear the input buffer and ignore invalid input.
-       - Restart the loop.
+       - redo step 3
+       - else if tryal >= 3 exit(0).
 
 4. Accept weight.
    - Validate the input:
-     - If the weight is non-numeric or less than or equal to 0:
-       - Display an error message.
-       - Clear the input buffer and ignore invalid input.
-       - Restart the loop.
+     - If the weight is non-numeric or less than or equal to 0 and tryal < 3:
+     - restart step 4.
+     - else if tryal >= 3 exit(0).
+       
 
 5.Compute the BMI using the formula:
      \[

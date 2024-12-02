@@ -26,34 +26,26 @@
  ```mermaid
 flowchart TD
     A((Start)) --> B[/Input x/]
-    B --> C{Is input for x valid?}
+    B --> C[/Input y/]
     
-    C -->|No| D[/Display "Invalid input" and Exit Program/]
-    C -->|Yes| E[/Input y/]
+    C --> D{Is x == 0?}
     
-    E --> F{Is input for y valid?}
+    D -->|Yes| E{Is y <= 0?}
+    E -->|Yes| F[/Display "Undefined" and Exit Program/]
+    E -->|No| G[/Display "0 ^ y is 0" and Exit Program/]
     
-    F -->|No| G[/Display "Invalid input" and Exit Program/]
-    F -->|Yes| H{Is x == 0?}
+    D -->|No| H{Is y > 0?}
+    H -->|Yes| I[Loop: Multiply product by x, y times]
+    H -->|No| J{Is y < 0?}
+    J -->|Yes| K[Loop: Multiply product by 1/x, absolute y times]
+    J -->|No| L[Set product = 1]
     
-    H -->|Yes| I{Is y <= 0?}
-    I -->|Yes| J[/Display "Undefined" and Exit Program/]
-    I -->|No| K[/Display "0 ^ y is 0" and Exit Program/]
-    
-    H -->|No| L{Is y > 0?}
-    L -->|Yes| M[Loop: Multiply product by x, y times]
-    L -->|No| N{Is y < 0?}
-    N -->|Yes| O[Loop: Multiply product by 1/x, absolute y times]
-    N -->|No| P[Set product = 1]
-    
-    M --> Q[/Display result: x ^ y = product/]
-    O --> Q
-    P --> Q
-    J --> R((End))
-    K --> R
-    Q --> R((End))
-    D --> R
-    G --> R
+    I --> M[/Display result: x ^ y = product/]
+    K --> M
+    L --> M
+    F --> N((End))
+    G --> N
+    M --> N((End))
 
 ```
 

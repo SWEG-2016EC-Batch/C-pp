@@ -23,10 +23,10 @@
    flowchart TD
     A((Start))--> B[/Input fuel tank capacity in gallons/]
     B --> C{Is input valid?}
-    C -->|No| D[Display error and terminate]
+    C -->|No| D[/Display error and terminate/]
     C -->|Yes| E[/Input miles per gallon/]
     E --> F{Is input valid?}
     F -->|No| D
     F -->|Yes| G[Calculate total miles]
-    G --> H[Display total miles]
+    G --> H[/Display total miles/]
     H --> I((End))

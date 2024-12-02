@@ -23,9 +23,9 @@
 5. End
 
    # Flowchart
- 
+ ```mermaid
 flowchart TD
-   flowchart TD
+  
     A((Start)) --> B[/Input base number x/]
     B --> C{Is input valid?}
     C -->|No| D[/Display "Invalid input!"/]
@@ -38,3 +38,4 @@ flowchart TD
     G -->|No| J[Calculate 1 / x^-y]
     J --> I
     I --> K((End))
+```

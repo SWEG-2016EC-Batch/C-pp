@@ -48,18 +48,21 @@ The provided C++ program that calculates the number of miles an automobile can d
 ### Step 7: End
 - **Terminate the program.**
 
-# Flowchart:
+# Flow Chart
 ```mermaid
-   flowchart TD
-    A[Start] --> B[Input fuel tank capacity in gallons]
-    B --> C{Is input valid?}
-    C -->|No| D[Display error and terminate]
-    C -->|Yes| E[Input miles per gallon]
-    E --> F{Is input valid?}
-    F -->|No| D
-    F -->|Yes| G[Calculate total miles]
-    G --> H[Display total miles]
-    H --> I[End]
+flowchart TD
+    Start([Start]) 
+    --> InputTank[/"Enter the tank capacity (gallons):"/]
+    InputTank 
+    --> InputMilePerGallon[/"Enter the miles per gallon the automobile can drive:"/]
+    InputMilePerGallon 
+    --> ReadInput["Read the capacity of the tank and miles per gallon"]
+    ReadInput 
+    --> CalculateTotalMiles["Calculate total miles = tank capacity * miles per gallon"]
+    CalculateTotalMiles 
+    --> DisplayResult[/"Display: 'The number of miles the automobile can drive without refueling is: total miles'"/]
+    DisplayResult 
+    --> End([End])
 
 
 

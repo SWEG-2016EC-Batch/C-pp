@@ -46,15 +46,13 @@
 ### Step 7: End
 - **Terminate the program.**
 
-# Flowchart
-  ```mermaid
+# Flow Chart
+```mermaid
+
 flowchart TD
-    A[Start] --> B[Input Base]
-    B --> C{Is input valid?}
-    C -->|No| D[Display error and terminate]
-    C -->|Yes| E[Input Exponent]
-    E --> F{Is input valid?}
-    F -->|No| D
-    F -->|Yes| G[Calculate Exponentiation]
-    G --> H[Display Result]
-    H --> I[End]
+    Start([Start]) --> InputBase[/"Enter the base number (x):"/]
+    InputBase --> InputPower[/"Enter the power (y):"/]
+    InputPower --> CalculatePower["Calculate result = pow(x, y)"]
+    CalculatePower --> DisplayResult[/"Display: 'x power of y = result'"/]
+    DisplayResult --> End([End])
+

@@ -49,7 +49,7 @@
 # Flowchart : Body Mass Index
 ```mermaid
 flowchart TD
-    A(Start) --> B[Initialize variables]
+    A((Start))--> B[Initialize variables]
     B --> C[Input height]
     C --> D{Is height valid?}
     D -->|No| E[Display error and restart loop]
@@ -67,4 +67,4 @@ flowchart TD
   
     N --> O{Continue?}
     O -->|Yes| C
-    O -->|No| P(End)
+    O -->|No| P((End))

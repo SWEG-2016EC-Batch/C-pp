@@ -1,3 +1,7 @@
+# Problem Analysis
+1. Input: Fullname, Weekly working hour, Bonus rate per hour, Base salary.
+2. process: bonus payment=weekly working hour*bonus rate per hour, gross salary=base salary+ bonus payment, pension =gross salary*0.05, tax=gross_salary*0.15, net salary=gross salary - tax - pension.
+3. output: Fullname, Bonus payment, Gross Salary, Pension , Net Salary.
 # Algorithm
 
 ## Steps:

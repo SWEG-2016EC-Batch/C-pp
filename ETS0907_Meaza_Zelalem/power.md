@@ -1,6 +1,6 @@
 # Problem Analysis
 1. **Input:** base, exponent
-2. **Process:** Use the pow() function to calculate the result of raising the base (x) to the power of the exponent (y)
+2. **Process:** multiplying x by itself y times.
 3. **Output:** Result
 
 

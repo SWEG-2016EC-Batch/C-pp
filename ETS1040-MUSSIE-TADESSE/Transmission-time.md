@@ -69,14 +69,18 @@ This algorithm computes the time required to transmit a file over a network at a
 
 ## File Transmission Time Flowchart
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Input file size in bytes]
-    B --> C{Is the input valid?}
-    C -->|No| D[Display error message]
-    D --> E[Terminate program]
-    C -->|Yes| F[Set transmission rate to 960 bytes/second]
-    F --> G[Calculate total transmission time in seconds]
-    G --> H[Convert total seconds into days, hours, minutes, and seconds]
-    H --> I[Output formatted transmission time]
-    I --> J[End]
+``` mermaid
+flowchart 
+    id1([Start])-->id2[Set run time]
+    id2-->id3{Do While answer is not '0'}
+    id3-->id4[/input: choice/]         
+    id4-->id5[/input: size/]
+    id5-->id6[Convert size to bytes]
+    id6-->id7[run time = file size / 960]
+    id7-->id8[Convert run time to days, hours, minutes, and seconds]
+    id8-->id9[/output: run time/]
+    id9-->id10[/"Would you like to continue"/]
+    id10-->id11[/input: answer/]
+    id11-->id12{If answer is not = 0}
+    id12--True-->id3
+    id12--False-->id13([End])

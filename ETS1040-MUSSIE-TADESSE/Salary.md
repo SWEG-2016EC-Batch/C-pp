@@ -70,20 +70,25 @@
 
 9. **End Program**
 
-# Flowchart
-   ```mermaid
+# Flow Chart
+```mermaid
 flowchart TD
-    A[Start] --> B[Input Full Name]
-    B --> C[Input Weekly Working Hours]
-    C --> D[Input Bonus Rate per Hour]
-    D --> E[Input Base Salary]
-    E --> F[Calculate Bonus Payment]
-    F --> G[Calculate Gross Salary]
-    G --> H[Calculate Pension Deduction]
-    H --> I[Calculate Tax Deduction]
-    I --> J[Calculate Net Salary]
-    J --> K[Display Results]
-    K --> L[End]
+    Start([Start]) --> InputWorkingHr[/"Enter your working hours per week:"/]
+    InputWorkingHr --> InputBonusRate[/"Enter your bonus rate per hour:"/]
+    InputBonusRate --> InputBaseSalary[/"Enter your base salary:"/]
+    InputBaseSalary --> CalculateBonus["Calculate bonus payment = working_hr * bonus_rate"]
+    CalculateBonus --> CalculateGrossSalary["Calculate gross salary = bonus_payment + base_salary"]
+    CalculateGrossSalary --> CalculatePension["Calculate pension deduction = gross_salary * pensions"]
+    CalculatePension --> CalculateTax["Calculate tax deduction = gross_salary * tax"]
+    CalculateTax --> CalculateNetSalary["Calculate net salary = gross_salary - pension_deduction - tax_deduction"]
+    
+    CalculateNetSalary --> DisplayBonus[/"Display Bonus payment"/]
+    DisplayBonus --> DisplayGrossSalary[/"Display Gross salary"/]
+    DisplayGrossSalary --> DisplayPension[/"Display Pension deduction"/]
+    DisplayPension --> DisplayTax[/"Display Tax deduction"/]
+    DisplayTax --> DisplayNetSalary[/"Display Net salary"/]
+    
+    DisplayNetSalary --> End([End])
 
 
 

@@ -23,18 +23,20 @@
 5. **End**
 
    # Flowchart
-   ```mermaid
+ ```mermaid
 flowchart TD
-    A[Start] --> B[Input base number (x)]
+    A((Start)) --> B[/Input base number (x)/]
     B --> C{Is input valid?}
-    C -->|No| D[Display "Invalid input!"]
-    C -->|Yes| E[Input power number (y)]
+    C -->|No| D[/Display "Invalid input!"/]
+    C -->|Yes| E[/Input power number (y)/]
     E --> F{Is input valid?}
     F -->|No| D
     F -->|Yes| G{Is y >= 0?}
     G -->|Yes| H[Calculate x^y]
-    H --> I[Display result]
+    H --> I[/Display result/]
     G -->|No| J[Calculate 1 / x^(-y)]
     J --> I
-    I --> K[End]
+    I --> K((End))
+```
+
 

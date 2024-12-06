@@ -1,3 +1,5 @@
+```mermaid
+
 graph TD;
     A[Start] --> B[Input Balance];
     B --> C[Input Account Type];
@@ -22,3 +24,4 @@ graph TD;
     R --> U;
     T --> U;
     U --> V[End];
+```

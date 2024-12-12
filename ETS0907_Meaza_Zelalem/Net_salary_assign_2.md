@@ -38,11 +38,11 @@
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Input Basic Salary]
+    A((Start)) --> B[/Input Basic Salary/]
     B --> C[Calculate Pension Deduction: 7% of Basic Salary]
-    C --> D[Input Worked Hours]
+    C --> D[/Input Worked Hours/]
     D --> E{Worked Hours > 40?}
-    E -- Yes --> F[Input Bonus Rate]
+    E -- Yes --> F[/Input Bonus Rate/]
     F --> G[Calculate Bonus: Worked Hours - 40 * Bonus Rate]
     E -- No --> H[Set Bonus to 0]
     G --> I[Determine Tax Rate]
@@ -66,10 +66,10 @@ flowchart TD
     S -- No --> U[Net Pay = Basic Salary - Pension Deduction]
     R -- No --> V[Calculate Tax Deduction: Gross Salary / Basic Salary * Tax Rate]
     V --> W[Net Pay = Gross Salary - Pension Deduction - Tax Deduction]
-    T --> X[Output Results]
+    T --> X[/Output Results/]
     U --> X
     W --> X
-    X --> Y[End]
+    X --> Y((End))
 
 
    

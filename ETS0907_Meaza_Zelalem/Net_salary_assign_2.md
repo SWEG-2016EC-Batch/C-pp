@@ -1,4 +1,4 @@
-#Algorithm 
+# Algorithm 
 
 1. Prompt the user to enter their basic salary.
    - Store the input in `basic_salary`.
@@ -34,8 +34,7 @@
 
 8. Display gross salary, tax deduction, and net pay.
 
-
-#Flowchart 
+# Flowchart 
 
 ```mermaid
 flowchart TD
@@ -44,7 +43,7 @@ flowchart TD
     C --> D[Input Worked Hours]
     D --> E{Worked Hours > 40?}
     E -- Yes --> F[Input Bonus Rate]
-    F --> G[Calculate Bonus: (Worked Hours - 40) * Bonus Rate]
+    F --> G[Calculate Bonus: Worked Hours - 40 * Bonus Rate]
     E -- No --> H[Set Bonus to 0]
     G --> I[Determine Tax Rate]
     H --> I
@@ -65,13 +64,16 @@ flowchart TD
     R -- Yes --> S{Worked Hours > 40?}
     S -- Yes --> T[Net Pay = Gross Salary - Pension Deduction]
     S -- No --> U[Net Pay = Basic Salary - Pension Deduction]
-    R -- No --> V[Calculate Tax Deduction: Gross Salary / (Basic Salary * Tax Rate)]
+    R -- No --> V[Calculate Tax Deduction: Gross Salary / Basic Salary * Tax Rate]
     V --> W[Net Pay = Gross Salary - Pension Deduction - Tax Deduction]
     T --> X[Output Results]
     U --> X
     W --> X
     X --> Y[End]
-```
+
+
+   
+   
 
 
 

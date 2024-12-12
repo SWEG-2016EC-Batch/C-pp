@@ -42,9 +42,9 @@
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Initialize Variables]
+    A((Start)) --> B[Initialize Variables]
     B --> C[While continue_ == 1]
-    C --> D[Input test, quiz, assignment, project, final_exam]
+    C --> D[/Input test, quiz, assignment, project, final_exam/]
     D --> E[Calculate total_mark]
     E --> F{total_mark >= 90?}
     F -- Yes --> G[A+]
@@ -61,7 +61,7 @@ flowchart TD
     P -- No --> R{total_mark >= 30?}
     R -- Yes --> S[D]
     R -- No --> T[F]
-    G --> U[Display total_mark and grade]
+    G --> U[/Display total_mark and grade/]
     I --> U
     K --> U
     M --> U
@@ -69,8 +69,8 @@ flowchart TD
     Q --> U
     S --> U
     T --> U
-    U --> V[Prompt: Continue?]
+    U --> V[/Prompt: Continue?/]
     V -- Yes (1) --> C
-    V -- No --> W[End]
+    V -- No --> W((End))
 ```
 

@@ -1,11 +1,11 @@
 ```mermaid
 flowchart TD
-    A[Start] --> B[Input Number]
+    A((Start)) --> B[/Input Number/]
     B --> C{Valid Number?}
     C -- No --> D[Retry 3 Times] --> E{Retries Exceeded?}
     E -- Yes --> F[Exit]
     E -- No --> B
-    C -- Yes --> G[Display Menu]
+    C -- Yes --> G[/Display Menu/]
     G --> H[Input Task Choice]
     H --> I{Valid Task?}
     I -- No --> J[Retry 3 Times] --> K{Retries Exceeded?}
@@ -22,7 +22,7 @@ flowchart TD
     L -- 8 --> T[Check Strong Number]
     L -- 9 --> U[Check Perfect Number]
     L -- Default --> F
-    M --> V[Display Results]
+    M --> V[/Display Results/]
     N --> V
     O --> V
     P --> V

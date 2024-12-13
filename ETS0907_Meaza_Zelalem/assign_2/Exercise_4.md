@@ -1,6 +1,6 @@
-flowchart TD
 ```mermaid
-    A([Start]) --> B[/Input number of rows/]
+flowchart TD
+    A((Start)) --> B[/Input number of rows/]
     B --> C[/Input number of columns/]
     C --> D[/Input pattern choice/]
     D --> E{Valid choice?}
@@ -8,7 +8,6 @@ flowchart TD
     F --> G[/Display pattern/]
     E -- No --> H[Display "Invalid choice"]
     H --> D
-    G --> I[/Continue? (1: Yes, 0: No)/]
+    G --> I[/Continue? 1: Yes, 0: No/]
     I -- Yes --> C
-    I -- No --> J([End])
-```
+    I -- No --> J((End))

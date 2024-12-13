@@ -1,5 +1,4 @@
-```
-mermaid
+```mermaid
 flowchart TD
     A((Start)) --> B[/Input Basic Salary/]
     B --> C[/Input Worked Hours/]

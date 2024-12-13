@@ -1,3 +1,5 @@
+```
+mermaid
 flowchart TD
     A((Start)) --> B[/Input Basic Salary/]
     B --> C[/Input Worked Hours/]
@@ -25,3 +27,4 @@ flowchart TD
     R --> S[Calculate Net Pay = Gross Salary - Pension - Tax]
     S --> T[/Output Bonus, Gross Salary, Tax, Pension, and Net Pay/]
     T --> U((End))
+```

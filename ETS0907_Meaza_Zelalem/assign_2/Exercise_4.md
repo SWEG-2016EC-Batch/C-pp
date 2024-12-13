@@ -11,6 +11,7 @@ flowchart TD
     G --> I[/Continue? 1: Yes, 0: No/]
     I -- Yes --> C
     I -- No --> J((End))
+```
 
 # Algorithm
 ## steps

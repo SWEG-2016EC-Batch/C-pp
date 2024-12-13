@@ -15,3 +15,4 @@ flowchart TD
     L -- 1 --> M[Reverse the Number]
     L -- 2 --> N[Count the Digits]
     L -- 3
+```

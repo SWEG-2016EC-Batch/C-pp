@@ -23,7 +23,7 @@ flowchart TD
     N --> Q
     O --> Q
     P --> Q
-    Q --> R[Prompt "Calculate Another Grade?"]
+    Q --> R[Prompt Calculate Another Grade? ]
     R --> S{Input == 1?}
     S -- Yes --> C
     S -- No --> T((End))

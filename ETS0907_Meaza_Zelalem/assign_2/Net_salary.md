@@ -4,7 +4,7 @@ flowchart TD
     B --> C[/Input Worked Hours/]
     C --> D[/Input Bonus Rate/]
     D --> E{Worked Hours > 40?}
-    E -- Yes --> F[Input Extra Hours]
+    E -- Yes --> F[/Input Extra Hours/]
     E -- No --> G[Set Extra Hours = 0]
     F --> H[Calculate Bonus = Extra Hours * Bonus Rate]
     G --> H

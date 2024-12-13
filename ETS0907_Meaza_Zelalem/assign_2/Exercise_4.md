@@ -1,4 +1,5 @@
 flowchart TD
+```mermaid
     A([Start]) --> B[/Input number of rows/]
     B --> C[/Input number of columns/]
     C --> D[/Input pattern choice/]

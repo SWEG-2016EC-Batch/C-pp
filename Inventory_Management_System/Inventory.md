@@ -1,3 +1,4 @@
+
 ### Algorithm: Inventory Management System
 
 1. **Initialize variables**:

@@ -1,3 +1,12 @@
+/*DONE BY 
+  Group Member        ID No
+1. Mahder Samson       ETS 0884/16
+2. Mahder Ashenafi     ETS 0881/16
+3. Meaza Zelalem       ETS 0907/16
+4. Mehretabe Abayneh   ETS 0912/16
+5. Mussie Tadesse      ETS 1040/16
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

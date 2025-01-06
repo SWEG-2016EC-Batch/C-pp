@@ -325,7 +325,119 @@ int main()
             cout << "\nRecords deleted successfully!\n";
             break;
         }
-        
+        case 4:
+        {
+            int c; // Store the choice of user.
+            cout << "\n1. Search by Store keeper.\n";
+            cout << "2. Search by Product Number.\n";
+            cout << "Choice: ";
+            cin >> c;
+            if (cin.fail() || (c != 1 && c != 2))
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid Input!\n";
+                break;
+            }
+            if (c == 1)
+            {
+                int x = -1, day; // Stores input id of user and index of id.
+                string id1;
+                
+                cout << "\nEnter Store Keeper ID: ";
+                cin >> id1;
+
+                for (int i = 0; i < s; i++)
+                {
+                    // Search for id in id array.
+                    if (sk_id[i] == id1)
+                    {
+                        x = i;
+                        break;
+                    }
+                }
+                if (x == -1)
+                {
+                    // Display error if id not found
+                    cout << "\nError: No Store Keeper with this id!\n";
+                    break;
+                }
+                cout << "\nEnter date to see records: ";
+                cin >> day;
+                // Accept and validate date input.
+                if (cin.fail() || day < 1 || day > 30)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvalid date!\n";
+                    break;
+                }
+
+                // Display records of Store keeper in table if id is found.
+                cout << "\nTotal Records of " << sk_username[x] << " on day " << day << "\n";
+                cout << "\t\t";
+                for (int t = 0; t < 4; t++)
+                {
+                    // Output warehouse number
+                    cout << "Warehouse " << (t + 1) << "\t";
+                }
+                cout << endl;
+                for (int u = 0; u < 5; u++)
+                {
+                    // Output product number
+                    cout << "Product " << (u + 1) << "\t";
+                    for (int r = 0; r < 4; r++)
+                    {
+                        // Output Product sold in each warehouse by the storekeeper.
+                        cout << inventory[day - 1][x][u][r] << "\t\t";
+                    }
+                    cout << endl;
+                }
+            }
+            else if (c == 2)
+            {
+                int pn, day; // Product number and date to see records
+                // Accept and validate inputs
+                cout << "\nEnter Product number: ";
+                cin >> pn;
+                if (cin.fail() || pn < 1 || pn > 5)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvalid Product NUmber! \n";
+                    break;
+                }
+                cout << "Enter Date to see transaction: ";
+                cin >> day;
+                if (cin.fail() || day < 1 || day > 30)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvaid date entered! \n";
+                    break;
+                }
+                cout << "Total records of Product " << pn << " on day " << day << endl;
+                cout << "\t\t";
+                for (int t = 0; t < s; t++)
+                {
+                    // Output store keeper usernames
+                    cout << sk_username[t] << "\t";
+                }
+                cout << endl;
+                for (int r = 0; r < 4; r++)
+                {
+                    // Output warehouse numbers.
+                    cout << "Warehouse " << (r + 1) << "\t";
+                    for (int u = 0; u < s; u++)
+                    {
+                        // Output quantity sold by each person in the warehouse.
+                        cout << inventory[day - 1][u][pn - 1][r] << "\t";
+                    }
+                    cout << endl;
+                }
+            }
+            break;
+        }
         case 5:
         {
             int c; // Stores choice of user.

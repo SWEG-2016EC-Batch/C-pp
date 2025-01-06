@@ -151,9 +151,181 @@ int main()
                 cout << "Do you want to enter another record?\n1. Yes\n2. No\n";
                 cout << "Choice: ";
                 cin >> cont;
+    
             } while (cont == 1 && slips < 5); // If the store keeper doesnt excceed 5 slips.
             break;
         }
+            case 2:
+        {
+            // Id of user and the date to edit records and an index to store index of storekeeper
+            int day, ind = -1;
+            string id2;
+            
+            cout << "\nEnter your storekeeper id: ";
+            cin >> id2;
+
+            for (int x = 0; x < s; x++)
+            {
+                // Search for the index of id
+                if (id2 == sk_id[x])
+                {
+                    ind = x;
+                    break;
+                }
+            }
+
+            if (cin.fail() || ind == -1)
+            {
+                cin.clear();
+                cin.ignore();
+                // Display error message if id doesnt exist.
+                cout << "\nError: No store Keeper with ID \"" << id2 << "\"!\n";
+                break;
+            }
+            // Accept and validate new information
+            cout << "\nEnter date to edit records: ";
+            cin >> day;
+
+            if (cin.fail() || day < 1 || day > 30)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid date!\n";
+                break;
+            }
+
+            int pn, wn, q; // New data to input into records
+
+            cout << "Enter Product Number: ";
+            cin >> pn;
+
+            if (cin.fail() || pn < 1 || pn > 5)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid Product number! Product Number should be in the range 1 - 30.\n";
+                break;
+            }
+
+            cout << "Enter Warehouse Number: ";
+            cin >> wn;
+
+            if (cin.fail() || wn < 1 || wn > 4)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid warehouse! Warehouse number should be in the range 1 - 30.\n";
+                break;
+            }
+
+            cout << "Enter New Quantity: ";
+            cin >> q;
+
+            if (cin.fail() || q < 0)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid quantity!\n";
+                break;
+            }
+            // Update inventory and notify the user.
+            inventory[day - 1][ind][pn - 1][wn - 1] = q;
+            cout << "\nInventory Updated Successfully!\n";
+            break;
+        }
+        case 3:
+        {
+            int c, date, pn, wn; // stores choice of user whether to delete all the record or a specific one
+            string id;
+            cout << "1. Delete a specific record \n2. Delete all records.\nChoice: ";
+            cin >> c;
+            // Accept and validate user's input
+            if (cin.fail() || (c != 1 && c != 2))
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid Input!\n";
+                break;
+            }
+
+            if (c == 1)
+            {
+                cout << "Enter Your ID: ";
+                cin >> id;
+
+                int index = -1; // Index of the Store keeper in our array
+                for (int i = 0; i < s; i++)
+                {
+                    // Search and find the index of the store keeper
+                    if (id == sk_id[i])
+                    {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index == -1)
+                {
+                    // If id not in database , show error message
+                    cout << "No Store Keeper with id \"" << id << "\"!\n";
+                    break;
+                }
+                // Accept and validate input from the user
+                cout << "Enter the specifc date of the record you want to delete: ";
+                cin >> date;
+
+                if (cin.fail() || date < 1 || date > 30)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvalid Input!\n";
+                    break;
+                }
+
+                cout << "Product number of the product to delete: ";
+                cin >> pn;
+
+
+                if (cin.fail() || pn < 1 || pn > 5)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvalid Input!\n";
+                    break;
+                }
+
+                cout << "Enter warehouse number: ";
+                cin >> wn;
+
+                if (cin.fail() || wn < 1 || wn > 4)
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "\nInvalid Input!\n";
+                    break;
+                }
+
+                inventory[date - 1][index][pn - 1][wn - 1] = 0;
+            }
+            else if (c == 2)
+            {
+                for (int l = 0; l < 30; l++)
+                {
+                    for (int m = 0; m < s; m++)
+                    {
+                        for (int n = 0; n < 5; n++)
+                        {
+                            for (int o = 0; o < 4; o++)
+                            {
+                                inventory[l][m][n][o] = 0;
+                            }
+                        }
+                    }
+                }
+            }
+            cout << "\nRecords deleted successfully!\n";
+            break;
+        }
+
         default:
         {
             // Display error message if choice is invalid.

@@ -326,6 +326,108 @@ int main()
             break;
         }
         
+        case 5:
+        {
+            int c; // Stores choice of user.
+            cout << "1. Summary by product and storekeeper(Contains Bonus Calculation)\n2.Summary by Warehouse & product.\nChoice: ";
+            cin >> c;
+            // Accept and validate input of user.
+            if (cin.fail() || (c != 1 && c != 2))
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid Input!\n";
+                break;
+            }
+            if (c == 1)
+            {
+                int product_sum[s] = {0}; // Stores the total products sold by each store keeper
+                int products[5][s] = {0};
+                for (int y = 0; y < s; y++)
+                {
+                    for (int x = 0; x < 30; x++)
+                    {
+                        for (int z = 0; z < 5; z++)
+                        {
+                            for (int d = 0; d < 4; d++)
+                            {
+                                // Add all quantities of a certain product for every store keeper
+                                products[z][y] += inventory[x][y][z][d];
+                                product_sum[y] += inventory[x][y][z][d];
+                            }
+                        }
+                    }
+                }
+                // Display output in a tabular format.
+                cout << "\nSummary of The Month.\n";
+                cout << "\t\t";
+                for (int g = 0; g < s; g++)
+                {
+                    cout << sk_username[g] << "\t"; // Display names of storkeepers
+                }
+                cout << "Total" << endl;
+                for (int o = 0; o < 5; o++)
+                {
+                    int sum_ = 0; // Stores cross total of the rows
+                    cout << "Product " << (o + 1) << "\t";
+                    for (int r = 0; r < s; r++)
+                    {
+                        cout << products[o][r] << "\t"; // Display total products for each sk
+                        sum_ += products[o][r];         // Add each value to cross total
+                    }
+                    cout << sum_ << endl;
+                }
+                // Displays total products sold by each store keeper.
+                cout << "Total Sales\t";
+                for (int p = 0; p < s; p++)
+                {
+                    cout << product_sum[p] << "\t";
+                }
+                cout << "-\n";
+                cout << "Bonus Pay\t"; // Output bonus row
+                for (int l = 0; l < s; l++)
+                {
+                    float bonus = 0;
+                    for (int n = 0; n < 5; n++)
+                    {
+                        // Calculate bonus using price and a rate of 5%.
+                        bonus += (price[n] * 0.05 * products[n][l]);
+                    }
+                    cout << bonus << "\t"; // Display bonus for each store keeper
+                }
+                cout << "-\n";
+            }
+            else if (c == 2)
+            {
+                // Display output in tabular format
+                cout << "\t\t";
+                for (int i = 0; i < 5; i++)
+                {
+                    cout << "Product " << (i + 1) << "\t"; // Display product numbers
+                }
+                cout << endl;
+                for (int o = 0; o < 4; o++)
+                {
+                    cout << "Warehouse" << (o + 1) << "\t"; // Display warehouse numbers
+                    for (int r = 0; r < 5; r++)
+                    {
+                        int sum_ = 0; // Stores total number of products in a certain warehouse
+                        for (int x = 0; x < 30; x++)
+                        {
+                            for (int a = 0; a < s; a++)
+                            {
+                                sum_ += inventory[x][a][r][o]; // Add Quantities to the sum
+                            }
+                        }
+                        cout << sum_ << "\t\t"; // Display number of products in each warehouse
+                    }
+                    cout << endl;
+                } 
+            }
+            break;
+        }
+
+
         case 6:
         {
             int day; // The day the user wants to view transaction report.

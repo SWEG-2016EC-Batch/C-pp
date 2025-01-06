@@ -325,6 +325,45 @@ int main()
             cout << "\nRecords deleted successfully!\n";
             break;
         }
+        case 6:
+        {
+            int day; // The day the user wants to view transaction report.
+
+            cout << "Enter the day to see report: ";
+            cin >> day;
+            // Validate Date
+            if (cin.fail() || day < 1 || day > 30)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nInvalid date! Date should be in the range 1 - 30.\n";
+                break;
+            }
+
+            cout << "\nSales made by each storekeeper in each warehouse\n";
+            cout << "\t\t";
+            // Print Information on the date in tabular format
+            for (int i = 0; i < s; i++)
+            {
+                cout << sk_username[i] << "\t";
+            }
+            cout << endl;
+            for (int x = 0; x < 4; x++)
+            {
+                cout << "Warehouse " << (x + 1) << "\t";
+                for (int y = 0; y < s; y++)
+                {
+                    int total_prod = 0;
+                    for (int z = 0; z < 5; z++)
+                    {
+                        total_prod += inventory[day - 1][y][z][x];
+                    }
+                    cout << total_prod << "\t";
+                }
+                cout << endl;
+            }
+            break;
+        }
         default:
         {
             // Display error message if choice is invalid.

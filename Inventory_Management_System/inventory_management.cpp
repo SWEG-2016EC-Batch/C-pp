@@ -325,6 +325,70 @@ int main()
             cout << "\nRecords deleted successfully!\n";
             break;
         }
+        case 7:
+        {
+            string id;
+            
+            cout << "Enter your ID: ";
+            cin >> id;
+            
+            int index = -1; // Index of the Store keeper in our array
+            for (int i = 0; i < s; i++)
+            {
+                // Search and find the index of the store keeper
+                if (id == sk_id[i])
+                {
+                    index = i;
+                    break;
+                }
+            }
+            if (index == -1)
+            {
+                // If id not in database , show error message
+                cout << "No Store Keeper with id \"" << id << "\"!\n";
+                break;
+            }
+
+            cout << "Welcome " << sk_username[index] << "!\n";
+            int c; // accept what the user wants to do.
+
+            cout << "1.View all storekeeper info.\n2.Edit username.\n3.Edit id.\nChoice: ";
+            cin >> c;
+
+            if (cin.fail() || (c != 3 && c != 1 && c != 2))
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "\nError: invalid choice!\n";
+                break;
+            }
+            if (c == 1)
+            {
+                cout << "ID\tUsername\n"; // Show info in table
+                for (int r = 0; r < s; r++)
+                {
+                    cout << sk_id[r] << "\t" << sk_username[r] << endl;
+                }
+            }
+            else if (c == 2)
+            {
+                cout << "\nEnter new username: "; // Accept and update new username
+                cin >> sk_username[index];
+                cout << "\nUsername updated successfully!\n";
+            }
+            else if (c == 3)
+            {
+                cout << "\nEnter new ID: ";
+                cin >> sk_id[index];
+                cout << "\nID updated successfully!\n"; // Accept and update new ID
+            }
+            break;
+        }
+        case 8:
+        {
+            cout << "\nExiting program!\nHave a wonderful day!\n";
+            break;
+        }
         case 6:
         {
             int day; // The day the user wants to view transaction report.

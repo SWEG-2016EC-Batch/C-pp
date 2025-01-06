@@ -155,7 +155,7 @@ int main()
             } while (cont == 1 && slips < 5); // If the store keeper doesnt excceed 5 slips.
             break;
         }
-            case 2:
+        case 2:
         {
             // Id of user and the date to edit records and an index to store index of storekeeper
             int day, ind = -1;
@@ -325,7 +325,6 @@ int main()
             cout << "\nRecords deleted successfully!\n";
             break;
         }
-
         default:
         {
             // Display error message if choice is invalid.
